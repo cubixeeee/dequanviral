@@ -11,7 +11,6 @@
       background: #000;
       color: #fff;
       font-family: Arial, sans-serif;
-      animation: fireworks 8s infinite;
     }
 
     .car {
@@ -31,30 +30,40 @@
       }
     }
 
-    @keyframes fireworks {
-      0% {
-        background-position: 0 0;
-      }
-      100% {
-        background-position: 100% 100%;
-      }
-    }
-
     h1 {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 2em;
+      font-size: 3em;
     }
   </style>
 </head>
 <body>
   <div class="car">
-    <!-- You can add an image tag for a car image here -->
+    <!-- JavaScript to choose a random car image -->
+    <script>
+      // Array of car image URLs
+      var carImages = [
+        'https://via.placeholder.com/150',  // Replace with your own image URLs
+        'https://via.placeholder.com/150',
+        'https://via.placeholder.com/150'
+      ];
+
+      // Choose a random index from the array
+      var randomIndex = Math.floor(Math.random() * carImages.length);
+
+      // Create an image element and set its source
+      var carImage = document.createElement('img');
+      carImage.src = carImages[randomIndex];
+
+      // Append the image to the .car element
+      document.querySelector('.car').appendChild(carImage);
+    </script>
   </div>
-  <h1>Welcome To Dequan Viral</h1>
+  <h1>DequanViral</h1>
 </body>
 </html>
+
 
 
