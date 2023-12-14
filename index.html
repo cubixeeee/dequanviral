@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome To Dequan Viral</title>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-        .car-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .car {
-            width: 100px;
-            height: 50px;
-            background-color: #3498db;
-            position: relative;
-            animation: moveCar 5s linear infinite;
-        }
-        @keyframes moveCar {
-            0% {
-                left: 0;
-            }
-            100% {
-                left: 100%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome To Dequan Viral</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      animation: fireworks 8s infinite;
+    }
+
+    .car {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: drive 5s linear infinite;
+    }
+
+    @keyframes drive {
+      0% {
+        transform: translateX(-50%) rotate(0deg);
+      }
+      100% {
+        transform: translateX(-50%) rotate(360deg);
+      }
+    }
+
+    @keyframes fireworks {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2em;
+    }
+  </style>
 </head>
 <body>
-    <div class="car-container">
-        <div class="car"></div>
-    </div>
-    <h1>Welcome To Dequan Viral</h1>
+  <div class="car">
+    <!-- You can add an image tag for a car image here -->
+  </div>
+  <h1>Welcome To Dequan Viral</h1>
 </body>
 </html>
+
 
